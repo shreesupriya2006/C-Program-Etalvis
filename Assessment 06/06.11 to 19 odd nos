@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+    int n=11;
+    loop:if(n<20)
+    {
+        printf("%d\n",n);
+        n=n+2;
+        goto loop;
+    }
+}
