@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,count=0,i=1,sum=0;
+    scanf("%d",&n);
+    loop:while(i<=n)
+    {
+        if(n%i==0){
+        count++;
+        }
+        i++;
+        goto loop;
+        
+    }
+    loop1:if(n>0)
+    {
+         int n1=n%10;
+        sum=sum+n1;
+        n=n/10;
+        goto loop1;
+    }
+    if(count==2)
+    {
+        if(sum==14)
+        printf("Prime & Sum of digit is 14");
+        else
+        printf("Prime & Sum of digit is not 14");
+    }
+    else
+    {
+        if(sum==14)
+        printf("Not Prime but Sum of digit is 14");
+        else 
+        printf("Not Prime & Sum of digit is not 14");
+    }
+}
