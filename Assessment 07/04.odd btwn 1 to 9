@@ -1,0 +1,14 @@
+#include <stdio.h>
+void disp_odd(int);
+int main()
+{
+    int a=1;
+    disp_odd(a);
+}
+void disp_odd(int a)
+{
+    for(int i=a;i<10;i=i+2)
+    {
+        printf("%d\n",i);
+    }
+}
