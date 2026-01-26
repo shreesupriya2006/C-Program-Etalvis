@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int n=1,count,i,count1=0;
+    loop:if(n<10)
+    {
+        count=0; //need to reset
+        i=1;
+    loop1:if(i<=n)
+    {
+        if(n%i==0){
+        count++;}
+        i++;
+        goto loop1;
+    }
+    if(count==2)
+    count1++;
+    n++;
+    goto loop;
+    }
+    
+    printf("%d",count1);
+    
+}
