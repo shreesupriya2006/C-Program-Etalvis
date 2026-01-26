@@ -1,0 +1,21 @@
+#include <stdio.h>
+void disp_2digit_ones5(int);
+int main()
+{
+    int a=10;
+    disp_2digit_ones5(a);
+}
+void disp_2digit_ones5(int a)
+{
+    int sum=0;
+    for(int i=a;i<100;i++)
+    {
+        int n1=i%10;
+        if(n1==5)
+        {
+            sum=sum+i;
+        }
+
+    }
+    printf("%d",sum);
+}
