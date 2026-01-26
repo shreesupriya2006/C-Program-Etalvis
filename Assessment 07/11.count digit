@@ -1,0 +1,19 @@
+#include <stdio.h>
+void count_total_digit(int);
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    count_total_digit(a);
+}
+void count_total_digit(int a)
+{
+    int count=0;
+    for(int i=a;i>1;i++)
+    {
+        i=i/10;
+        count++;
+        
+    }
+    printf("%d",count);
+}
