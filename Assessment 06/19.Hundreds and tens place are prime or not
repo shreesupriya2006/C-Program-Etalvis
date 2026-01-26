@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int n,i=1,n3,n2,count=0;
+    scanf("%d",&n);
+    int temp=n;
+    temp=n/10;
+    n2=temp%10;
+    n=n/100;
+    n3=n%10;
+    int digit=n3*10+n2;
+    loop:if(i<=digit)
+    {
+        if(digit%i==0)
+        {
+            count++;
+        }
+        i++;
+        goto loop;
+    }
+    if(count==2)
+    printf("Prime");
+    else
+    printf("Not Prime");
+}
