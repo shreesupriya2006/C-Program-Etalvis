@@ -9,11 +9,9 @@ int main()
 void count_total_digit(int a)
 {
     int count=0;
-    for(int i=a;i>1;i++)
-    {
-        i=i/10;
-        count++;
-        
-    }
+while(a>0)
+{
+count++;
+a=a/10;}
     printf("%d",count);
 }
