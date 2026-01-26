@@ -1,0 +1,19 @@
+#include <stdio.h>
+void disp_sum_all_digit(int);
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    disp_sum_all_digit(a);
+}
+void disp_sum_all_digit(int a)
+{
+    int sum=0;
+    while(a>0)
+    {
+        int n1=a%10;
+        sum=sum+n1;
+        a=a/10;
+    }
+    printf("%d",sum);
+}
