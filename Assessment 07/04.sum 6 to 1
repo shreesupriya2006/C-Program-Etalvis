@@ -1,0 +1,16 @@
+#include <stdio.h>
+void disp_rsum(int);
+int main()
+{
+    int a=6;
+    disp_rsum(a);
+}
+void disp_rsum(int a)
+{
+    int sum=0;
+    for(int i=a;i>=1;i--)
+    {
+        sum=sum+i;
+    }
+    printf("%d",sum);
+}
