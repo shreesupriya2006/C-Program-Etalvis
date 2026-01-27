@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int n1,n2,big,lcm;
+    scanf("%d %d",&n1,&n2);
+    if(n1>n2)
+    big=n1;
+    else
+    big=n2;
+    int i=big;
+    loop:{
+        if((i%n1==0)&&(i%n2==0))
+        {
+        lcm=i;
+        goto end;
+    }
+    i++;
+    goto loop;}
+    end:
+    printf("%d",lcm);
+    
+}
