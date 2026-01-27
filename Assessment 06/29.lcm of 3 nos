@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int n1,n2,n3,max,lcm;
+    scanf("%d %d %d",&n1,&n2,&n3);
+    max=n1;
+    if(n2>=max)
+    max=n2;
+    if(n3>=max)
+    max=n3;
+    int i=max;
+    loop:
+        {if(i%n1==0&&i%n2==0&&i%n3==0)
+        {
+            lcm=i;
+            goto end;
+        }
+        i++;
+        goto loop;}
+    end:
+    printf("%d",lcm);
+}
