@@ -2,7 +2,7 @@
 int main()
 {
     int n,prime=1,n1,n2;
-    scanf("%d",&n);
+    scanf("%d",&n); 
      n2=n%10;
      n1=(n/10)%10; 
     int sum=n1*10+n2;
