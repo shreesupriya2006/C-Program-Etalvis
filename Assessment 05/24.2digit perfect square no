@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int n,i,count=0,sum=0;
+    scanf("%d",&n);
+    while(n>=10)
+    {
+        i=1;
+        int n1=n%10;
+        int n2=(n/10)%10;
+        sum=n2*10+n1;
+        loop:if(i<=sum)
+        {
+           if(i*i==sum)
+           count++;
+           i++;
+           goto loop;
+        }
+        
+        n=n/10;
+    }
+    printf("%d",count);
+    
+}
