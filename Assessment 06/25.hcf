@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int n1,n2,big=0,i,hcf,small;
+    scanf("%d %d",&n1,&n2);
+    if(n1<n2)
+    small=n1; 
+    else
+    small=n2;
+    i=small;
+    loop:if(i>0)
+    {
+        if((n1%i==0)&&(n2%i==0))
+        {
+             hcf=i;
+             goto end;
+         }
+        i--;
+        goto loop;
+    }
+    end:
+    printf("%d",hcf);
+}
