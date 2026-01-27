@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int n,count=0,sum=0;
+    scanf("%d",&n);
+    while(n>=10)
+    {
+        int n1=n%10;
+        int n2=(n/10)%10;
+        sum=n2*10+n1;
+        if(sum%2==1)
+        count++;
+        n=n/10;
+    }
+    printf("%d",count);
+    
+}
