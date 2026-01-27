@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+   int n,prime=1,count=0;
+   scanf("%d",&n);
+   while(n>0)
+   {
+       int i=2;
+       int n1=n%10;
+       loop:if(i<n1)
+       {
+           if(n%i==0)
+           prime=0;
+           i++;
+           goto loop;
+       }
+       if(prime)
+       count++;
+       n=n/10;
+   }
+   printf("%d",count);
+}
