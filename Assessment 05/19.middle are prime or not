@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int n,prime=1,n1,n2;
+    scanf("%d",&n);
+    n1=(n/100)%10;
+    n2=(n/10)%10; 
+    int sum=n1*10+n2;
+    int i=2;
+    while(i<sum)
+    {
+        if(sum%i==0){
+        prime=0;
+        }
+        i++;
+    }
+    if(prime)
+    printf("Prime");
+    else
+    printf("Not Prime");
+}
