@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int n=1,count=0;
+    loop:if(n<100000)
+    {
+       int  temp=n,sum=0;
+        loop1:if(temp>=1)
+        {
+            int n1=temp%10;
+            sum=sum+n1;
+            temp=temp/10;
+            goto loop1;
+            
+        }
+        if(sum==14)
+        count++;
+        n++;
+        goto loop;
+    }
+    printf("%d",count);
+    
+}
