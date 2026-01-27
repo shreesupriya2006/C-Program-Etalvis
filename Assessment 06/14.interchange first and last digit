@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int n,count=0,power=1;
+    scanf("%d",&n);
+    int n2=n%10;
+    int n1=n;
+    loop:if(n1>10)
+    {
+        n1=n1/10;
+        power=power*10;
+        goto loop;
+    }
+    int middle=n%power;
+    middle=middle/10;
+    int result=n2*power+middle*10+n1;
+    printf("%d",result);
+}
