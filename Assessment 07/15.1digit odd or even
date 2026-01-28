@@ -1,0 +1,29 @@
+#include <stdio.h>
+void check_last_digit_odd(int);
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    check_last_digit_odd(n);
+}
+void check_last_digit_odd(int n)
+{
+    int n1,power=1;
+    int temp=n;
+    while(temp>=10)
+    {
+        temp=temp/10;
+        power=power*10;
+    }
+    n1=temp;
+    if(n1%2==0)
+    printf("%d",n);
+    else
+    {
+        int n2=n%10;
+        int middle=(n%power)/10;
+        int result=(n1-1)*power+middle*10+n2;
+        printf("%d",result);
+        
+    }
+}
