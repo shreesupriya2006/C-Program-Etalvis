@@ -1,0 +1,22 @@
+#include <stdio.h>
+void check_prime(int);
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    check_prime(n);
+}
+void check_prime(int n)
+{
+    int prime=1,i=2;
+    while(i<n)
+    {
+        if(n%i==0)
+        prime=0;
+        i++;
+    }
+    if(prime)
+    printf("Prime");
+    else
+    printf("Not Prime");
+}
