@@ -8,21 +8,22 @@ int main()
 }
 void check_prime_and_sum14(int n)
 {
-    int prime=1,i=2,sum=0;
+    int prime=1,sum=0,i=2;
     int temp=n;
     while(temp>0)
     {
-    int n1=temp%10;
+        int n1=temp%10;
+        sum=sum+n1;
+        temp=temp/10;
+    }
     loop:if(i<n)
     {
         if(n%i==0)
-        prime=0;
+        {
+         prime=0;
+        }
         i++;
         goto loop;
-    }
-    sum=sum+n1;
-    temp=temp/10;
-    
     }
     
     if(prime){
