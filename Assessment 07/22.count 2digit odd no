@@ -1,6 +1,6 @@
 #include <stdio.h>
 void disp_total_2digit_odd(int);
-int main()
+int main() 
 {
     int n;
     scanf("%d",&n);
