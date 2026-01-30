@@ -1,0 +1,30 @@
+#include <stdio.h>
+void middle_2digit_prime(int);
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    middle_2digit_prime(n);
+}
+void middle_2digit_prime(int n)
+{
+    int prime=1;
+    int n2=(n/10)%10;
+    int n1=(n/100)%10;
+    prime=n1*10+n2;
+    int i=2;
+    loop:if(i<prime)
+    {
+        if(prime%i==0)
+        {
+        prime=0;
+        }
+        i++;
+        goto loop;
+    }
+   
+    if(prime)
+    printf("Prime");
+    else
+    printf("Not Prime");
+}
