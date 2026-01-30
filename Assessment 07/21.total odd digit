@@ -7,7 +7,7 @@ int main()
     disp_total_odd_digit(n);
 }
 void disp_total_odd_digit(int n)
-{
+{ 
     int count=0;
     loop:if(n>0)
     {
