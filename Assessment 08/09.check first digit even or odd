@@ -1,0 +1,28 @@
+#include <stdio.h>
+int check_last_digit_odd(int);
+int main()
+{
+    int n,result;
+    scanf("%d",&n);
+    result=check_last_digit_odd(n);
+    printf("%d ",result);
+}
+int check_last_digit_odd(int a)
+{
+
+    int i=a,power=1,first,middle,last,n1;
+    loop:if(i>=10)
+    {
+        power=power*10;
+        i=i/10;
+        goto loop;
+    }
+    last=a%10;
+    middle=(a%power)/10;
+    first=a/power;
+    if(first%2==0)
+    return a;
+    else
+    return (first-1)*power+middle*10+last;
+
+}
