@@ -1,0 +1,29 @@
+#include <stdio.h>
+int disp_single_digit_prime(int);
+int main()
+{
+    int n,count;
+    scanf("%d",&n);
+    count=disp_single_digit_prime(n);
+    printf("%d",count);
+
+}
+int disp_single_digit_prime(int a)
+{
+    int temp=a,count=0;
+    loop:if(temp>0)
+    {
+        int prime=1;
+        int n1=temp%10;
+        for(int i=2;i<n1;i++)
+        {
+            if(n1%i==0)
+                prime=0;
+        }
+        if(prime)
+            count++;
+        temp=temp/10;
+        goto loop;
+    }
+    return count;
+}
