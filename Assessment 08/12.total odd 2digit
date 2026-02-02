@@ -1,0 +1,23 @@
+#include <stdio.h>
+int disp_total_odd_digit(int);
+int main()
+{
+    int n,od;
+    scanf("%d",&n);
+    od=disp_total_odd_digit(n);
+    printf("%d",od);
+}
+int disp_total_odd_digit(int a)
+{
+    int count=0;
+    int i=a;
+    loop:if(i>=10){
+    int n1=i%10;
+    int n2=(i/10)%10;
+    int sum=n2*10+n1;
+    if(sum%2==1)
+      count++;
+    i=i/10;
+    goto loop;}
+    return count;
+}
