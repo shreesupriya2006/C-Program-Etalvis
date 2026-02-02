@@ -1,7 +1,7 @@
 #include <stdio.h>
 int disp_total_odd_digit(int);
 int main()
-{
+{ 
     int n,od;
     scanf("%d",&n);
     od=disp_total_odd_digit(n);
