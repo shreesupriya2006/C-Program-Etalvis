@@ -1,0 +1,29 @@
+#include <stdio.h>
+int disp_interchange_first_last_digit(int);
+int main()
+{
+    int n,result;
+    scanf("%d",&n);
+    result=disp_interchange_first_last_digit(n);
+    printf("%d",result);
+}
+int disp_interchange_first_last_digit(int a)
+{
+    int power=1,first,last,middle,result;
+    int i=a;
+    loop:if(i>=10)
+    {
+
+        power=power*10;
+        i=i/10;
+        goto loop;
+
+
+    }
+    first=i;
+    last=a%10;
+    middle=(a%power)/10;
+    result=last*power+middle*10+first;
+    return result;
+
+}
