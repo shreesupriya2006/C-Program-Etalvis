@@ -1,0 +1,18 @@
+#include <stdio.h>
+int disp_biggest_4digit_div7_9(int);
+int main()
+{
+    int n=1000;
+    int result=disp_biggest_4digit_div7_9(n);
+    printf("%d",result);
+}
+int disp_biggest_4digit_div7_9(int a)
+{
+    int result;
+    for(int i=a;i<10000;i++)
+    {
+        if((i%7==0)&&(i%9==0))
+            result=i;
+    }
+    return result;
+}
