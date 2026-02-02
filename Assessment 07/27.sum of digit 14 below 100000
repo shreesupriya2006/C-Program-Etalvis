@@ -1,0 +1,28 @@
+#include <stdio.h>
+void disp_count_sum_14(int);
+int main()
+{
+    int n=1;
+    disp_count_sum_14(n);
+}
+void disp_count_sum_14(int n)
+{
+    int count=0;
+    loop:if(n<100000)
+    {
+        int i=n;
+        int sum=0;
+        loop1:if(i>0)
+        {
+            int n1=i%10;
+            sum=sum+n1;
+            i=i/10;
+            goto loop1;
+        }
+        if(sum==14)
+        count++;
+        n++;
+        goto loop;
+    }
+    printf("%d",count);
+}
