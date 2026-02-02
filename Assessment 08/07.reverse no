@@ -1,0 +1,20 @@
+#include <stdio.h>
+int disp_reverse_number(int);
+int main()
+{
+    int n,rev;
+    scanf("%d",&n);
+    rev=disp_reverse_number(n);
+    printf("%d",rev);
+}
+int disp_reverse_number(int a)
+{
+    int rev=0;
+    loop:if(a>0)
+    {
+        rev=rev*10+(a%10);
+        a=a/10;
+        goto loop;
+    }
+    return rev;
+}
