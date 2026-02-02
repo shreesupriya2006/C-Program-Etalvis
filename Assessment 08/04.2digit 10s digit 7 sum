@@ -1,0 +1,21 @@
+#include <stdio.h>
+int disp_2digit_odd_tens7_sum(int);
+int main()
+{
+    int n=10;
+    int sum=disp_2digit_odd_tens7_sum(n);
+    printf("%d",sum);
+}
+int disp_2digit_odd_tens7_sum(int a)
+{
+    int sum=0;
+    loop:if(a<100)
+    {
+        if((a/10)==7){
+                if(a%2==1)
+            sum=sum+a;}
+        a++;
+        goto loop;
+    }
+    return sum;
+}
