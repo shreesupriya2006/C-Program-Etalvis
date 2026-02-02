@@ -1,0 +1,21 @@
+#include <stdio.h>
+int disp_count_totaldigit(int);
+int main()
+{
+    int n,count;
+    scanf("%d",&n);
+    count=disp_count_totaldigit(n);
+    printf("%d",count);
+}
+int disp_count_totaldigit(int a)
+{
+    int count=0;
+    loop:if(a>0)
+    {
+        int n1=a%10;
+        count++;
+        a=a/10;
+        goto loop;
+    }
+    return count;
+}
