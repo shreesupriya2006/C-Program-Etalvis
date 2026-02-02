@@ -1,0 +1,22 @@
+#include <stdio.h>
+int disp_rsum(int);
+int main()
+{
+    int sum;
+    int n=6;
+    sum=disp_rsum(n);
+    printf("%d",sum);
+
+}
+int disp_rsum(int a)
+{
+    int sum=0;
+    loop:if(a>0)
+    {
+        sum=sum+a;
+        a--;
+        goto loop;
+    }
+    return sum;
+
+}
