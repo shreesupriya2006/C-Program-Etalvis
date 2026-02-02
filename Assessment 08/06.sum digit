@@ -1,0 +1,21 @@
+#include <stdio.h>
+int disp_sum_alldigit(int);
+int main()
+{
+    int n,sum;
+    scanf("%d",&n);
+    sum=disp_sum_alldigit(n);
+    printf("%d",sum);
+}
+int disp_sum_alldigit(int a)
+{
+    int sum=0;
+    loop:if(a>0)
+    {
+        int n1=a%10;
+        sum=sum+n1;
+        a=a/10;
+        goto loop;
+    }
+    return sum;
+}
