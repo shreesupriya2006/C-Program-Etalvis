@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int a[5];
+    int i,j;
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<5;i++)
+    {
+        j=i;
+        while(j<4)
+        {
+            if(a[i]<a[j+1])
+            {
+                int temp=a[i];
+                a[i]=a[j+1];
+                a[j+1]=temp;
+            }
+            j++;
+        }
+
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
