@@ -1,0 +1,26 @@
+#include <stdio.h>
+int disp_LCM2(int,int);
+int main()
+{
+    int n1,n2,lcm;
+    scanf("%d %d",&n1,&n2);
+    lcm=disp_LCM2(n1,n2);
+    printf("%d",lcm);
+}
+int disp_LCM2(int a,int b)
+{
+    int max,lcm=0;
+    if(a>b)
+        max=a;
+    else
+        max=b;
+    loop:{
+    if((max%a==0)&&(max%b==0)){
+        lcm=max;
+        goto end;}
+        max++;
+        goto loop;
+    }
+    end:
+    return lcm;
+}
