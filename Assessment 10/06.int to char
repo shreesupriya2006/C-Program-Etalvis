@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+   int n,rev=0;
+   scanf("%d",&n);
+   loop:if(n>0)
+   {
+       rev=rev*10+(n%10);
+       n=n/10;
+       goto loop;
+   }
+   loop1:if(rev>0)
+   {
+       int n1=rev%10;
+       printf("%c\n",n1+'0');
+       rev=rev/10;
+       goto loop1;
+   }
+}
