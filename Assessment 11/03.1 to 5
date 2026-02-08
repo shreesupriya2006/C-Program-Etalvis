@@ -1,0 +1,17 @@
+#include <stdio.h>
+void arrange_ascend(int *);
+int main()
+{
+    int n=1;
+    int *p=&n;
+    arrange_ascend(p);
+}
+void arrange_ascend(int *p)
+{
+    int i=*p;
+    while( i<6)
+    {
+        printf("%d\n",i);
+        i++;
+    }
+}
