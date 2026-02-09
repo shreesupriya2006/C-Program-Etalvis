@@ -1,0 +1,25 @@
+#include <stdio.h>
+int memcp(int *src,int *dst,int size);
+int main()
+{
+    int size,i;
+    scanf("%d",&size);
+    int src[size],dst[size];
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&src[i]);
+    }
+    memcpy(src,dst,size);
+    for(i=0;i<size;i++)
+    {
+        printf("%d ",dst[i]);
+    }
+}
+int memcpy(int *src,int *dst,int size)
+{
+    int i;
+    for(i=0;i<size;i++)
+    {
+        *(dst+i)=*(src+i);
+    }
+}
