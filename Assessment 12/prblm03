@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main ()
+{
+    char m[100],s[50];
+    char *p,*q,*t;
+    int pos=-1;
+    scanf("%s",m);
+    scanf("%s",s);
+    for(p=m;*p!='\0';p++)
+    {
+        t=p;
+        q=s;
+        while (*t==*q&&*q!='\0')
+        {
+            t++;
+            q++;
+        }
+        if (*q=='\0')
+        {
+            pos=p- m;
+            break;
+        }
+    }
+    if (pos!=-1)
+        printf("%d", pos);
+    else
+        printf("Not Found");
+}
+
