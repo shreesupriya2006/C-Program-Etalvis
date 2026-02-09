@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<string.h>
+
+void getnumbers(char *n1,char *n2);
+void multiplynumbers(char *n1,char *n2,char *res);
+void print(char *res);
+
+int main ()
+{
+    char number1[51],number2[51],result[102];
+    getnumbers(number1,number2);
+    multiplynumbers(number1,number2,result);
+    print(result);
+}
+
+void getnumbers(char *n1,char *n2)
+{
+    scanf("%s",n1);
+    scanf("%s",n2);
+}
+
+void multiplynumbers(char *n1,char *n2,char *res)
+{
+    int i,j,len1,len2,sum;
+    int temp[102]={0};
+    len1=strlen(n1);
+    len2=strlen(n2);
+    
+    for(i=len1-1;i>=0;i--)
+    {
+        for(j=len2-1;j>=0;j--)
+        {
+            sum=(n1[i]-'0')*(n2[j]-'0');
+            sum=sum+temp[i+j+1];
+            temp[i+j+1]=sum%10;
+            temp[i+j]=temp[i+j]+sum/10;
+        }
+    }
+    i=0;
+    j=0;
+    while(i<len1+len2 && temp[i]==0)
+        i++;
+    if(i==len1+len2)
+        res[j++]='0';
+    else
+        while(i<len1+len2)
+            res[j++]=temp[i++]+'0';
+    res[j]='\0';
+}
+
+void print(char *res)
+{
+    printf("%s",res);
+}
