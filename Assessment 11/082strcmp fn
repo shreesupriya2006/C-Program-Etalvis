@@ -1,0 +1,25 @@
+#include <stdio.h>
+void strcomp(char *str,char *dst);
+int main()
+{
+    int size,i,*str,*dst;
+    scanf("%d",&size);
+    char a[size],b[size];
+    scanf("%s",a);
+    scanf("%s",b);
+    str=&a[0];
+    dst=&b[0];
+    if(strcmp(a,b))
+        printf("Success");
+    else
+        printf("Failure");
+
+}
+void strcomp(char *str,char *dst)
+{
+    int i,size;
+    for(i=0;i<size;i++)
+    if(*str!=*dst)
+        return 0;
+    return 1;
+}
