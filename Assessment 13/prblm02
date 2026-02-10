@@ -1,0 +1,56 @@
+/*Question:
+Create a sample link list with about 5 entries
+using the following structure. Insert a
+new entry before or after a given id.
+Menu Items
+1. Insert Entry
+2. Display List
+3. Exit*/
+
+#include<stdio.h>
+#include<stdlib.h>
+struct student
+{
+    int id;
+    int Maths;
+    int Science;
+    struct student *next;
+};
+int main()
+{
+    struct student *head=NULL,*temp=NULL,*newnode=NULL;
+    int id;
+    while(1)
+    {
+        printf("Enter Student ID (-1 to stop):");
+        scanf("%d",&id);
+        if(id==-1)
+            break;
+        newnode=(struct student*)malloc(sizeof(struct student));
+        newnode->id=id;
+        printf("Enter Maths Marks:");
+        scanf("%d",&newnode->Maths);
+        printf("Enter Science Marks:");
+        scanf("%d",&newnode->Science);
+        newnode->next=NULL;
+        if(head==NULL)
+        {
+            head=newnode;
+            temp=newnode;
+        }
+        else
+        {
+            temp->next=newnode;
+            temp=newnode;
+        }
+    }
+    printf("\n--- Student Details ---\n");
+    temp=head;
+    while(temp!=NULL)
+    {
+        printf("ID:%d Maths:%d Science:%d\n",
+               temp->id,temp->Maths,temp->Science);
+        temp=temp->next;
+    }
+    return 0;
+}
